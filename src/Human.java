@@ -10,7 +10,7 @@ public class Human implements Athletes {
     }
 
     @Override
-    public void info(){
+    public void info() {
         System.out.printf("Я человек %s", name);
     }
 
@@ -25,11 +25,22 @@ public class Human implements Athletes {
         System.out.printf("я могу перепрыгнуть %d \n", maxHeight);
 
     }
+
     public void jump(Wall wall) {
         if (maxHeight >= wall.height) {
             System.out.printf(" \n %s перепрыгнул стену высотой %d ", name, wall.height);
         } else {
             System.out.printf(" \n %s не смог перепрыгнуть стену высотой %d ", name, wall.height);
+
+        }
+    }
+
+    @Override
+    public void run(Track track) {
+        if (maxHeight >= track.getLength()) {
+            System.out.printf(" \n %s пробежал %d ", name, track.Length);
+        } else {
+            System.out.printf(" \n %s не смог пробежать %d ", name, track.Length);
 
         }
     }

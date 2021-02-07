@@ -19,6 +19,8 @@ public class Robot implements Athletes {
         }
     }
 
+
+
     @Override
     public void info(){
         System.out.printf("\n Я робот %s", name);
@@ -31,7 +33,17 @@ public class Robot implements Athletes {
 
     @Override
     public void jump() {
-    jump();
+
+    }
+
+    @Override
+    public void run(Track track) {
+        if (maxHeight >= track.getLength()) {
+            System.out.printf(" \n %s пробежал %d ", name, track.Length);
+        } else {
+            System.out.printf(" \n %s не смог пробежать %d ", name, track.Length);
+
+        }
     }
 
 }

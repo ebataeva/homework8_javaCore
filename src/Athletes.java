@@ -4,4 +4,5 @@ public interface Athletes {
      void run();
      void jump();
      void jump(Wall wall);
+     void run(Track track);
 }

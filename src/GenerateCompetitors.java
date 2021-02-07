@@ -7,4 +7,10 @@ public class GenerateCompetitors {
          return new Athletes[]{cat, human, robot};
     }
 
+    public static Barriers[] getBarriers(){
+        Wall wall = new Wall(4);
+        Track track = new Track(5);
+        return new Barriers[]{wall, track};
+    }
+
 }

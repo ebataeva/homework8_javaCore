@@ -1,9 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-Wall wall = new Wall(5);
+        Barriers[] barriers = GenerateCompetitors.getBarriers();
 Athletes[] athletes =  GenerateCompetitors.getCompetitors();
 for (Athletes a: athletes){
-    a.jump(wall);
+ for(Barriers b: barriers){
+     if(b instanceof Track){
+     a.run((Track) b);}else {
+         a.jump((Wall) b);
+     }
+ }
 }
     }
 }

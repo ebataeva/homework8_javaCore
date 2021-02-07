@@ -31,4 +31,14 @@ public class Cat implements Athletes {
 
         }
     }
+
+    @Override
+    public void run(Track track) {
+        if (maxHeight >= track.getLength()) {
+            System.out.printf(" \n %s пробежал %d ", name, track.Length);
+        } else {
+            System.out.printf(" \n %s не смог пробежать %d ", name, track.Length);
+
+        }
+    }
 }
