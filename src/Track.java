@@ -8,4 +8,7 @@ public class Track implements Barriers {
     public int getLength() {
         return Length;
     }
+
+
+
 }

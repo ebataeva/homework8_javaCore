@@ -5,4 +5,5 @@ public interface Athletes {
      void jump();
      void jump(Wall wall);
      void run(Track track);
+     boolean canDoIt = true;
 }

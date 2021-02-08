@@ -8,9 +8,11 @@ public class GenerateCompetitors {
     }
 
     public static Barriers[] getBarriers(){
-        Wall wall = new Wall(4);
+        Wall wall = new Wall(14);
         Track track = new Track(5);
-        return new Barriers[]{wall, track};
+        Wall wall1 = new Wall(2);
+        Track track1 = new Track(3);
+        return new Barriers[]{wall, track, wall1, track1};
     }
 
 }
