@@ -11,8 +11,14 @@ public class TestData {
         int i = rand.nextInt(arr.length);
         return arr[i];
     }
-    public static String generateName(){
+    public static String generateNameOfCat(){
         return    getRandOfArray(namesOfCats);
+    }
+    public static String generateNameOfRobats(){
+        return    getRandOfArray(namesOfRobars);
+    }
+    public static String generateNameOfHuman(){
+        return    getRandOfArray(namesOfHuman);
     }
 
     public static int generateBarrier(int n){

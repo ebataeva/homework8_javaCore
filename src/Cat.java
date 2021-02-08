@@ -8,11 +8,13 @@ boolean canDoIt;
         this.name = name;
         this.maxHeight = maxHeight;
         this.maxLength = maxLength;
-        boolean canDoIt = true;
+         canDoIt = true;
     }
 
     public void info(){
         System.out.printf("Я кошка %s", name);
+        run();
+        jump();
     }
 
     @Override
@@ -28,7 +30,7 @@ boolean canDoIt;
     public void jump(Wall wall) {
         if(canDoIt) {
             if (maxHeight >= wall.height) {
-                System.out.printf(" \n %s перепрыгнул стену высотой %d ", name, wall.height);
+                System.out.printf(" \n %s перепрыгнул стену высотой %d, его максимум %d ", name, wall.height, maxHeight);
             } else {
                 System.out.printf(" \n %s не смог перепрыгнуть стену высотой %d, его максимум %d ", name, wall.height, maxHeight);
                 canDoIt = false;
@@ -40,10 +42,10 @@ boolean canDoIt;
     @Override
     public void run(Track track) {
         if(canDoIt){
-            if (maxHeight >= track.getLength()) {
-                System.out.printf(" \n %s пробежал %d ", name, track.Length);
+            if (maxLength >= track.getLength()) {
+                System.out.printf(" \n %s пробежал %d,  его максимум - %d", name, track.length, maxLength);
             } else {
-                System.out.printf(" \n %s не смог пробежать %d, его максимум - %d", name, track.Length, maxLength);
+                System.out.printf(" \n %s не смог пробежать %d, его максимум - %d", name, track.length, maxLength);
                 canDoIt = false;
 
             }

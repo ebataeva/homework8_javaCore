@@ -12,9 +12,10 @@ public class Human implements Athletes {
 
     @Override
     public void info() {
-        System.out.printf("Я человек %s", name);
+        System.out.printf("Я человек %s\n", name);
+        run();
+        jump();
     }
-
 
     @Override
     public void run() {
@@ -23,14 +24,15 @@ public class Human implements Athletes {
 
     @Override
     public void jump() {
-        System.out.printf("я могу перепрыгнуть %d \n", maxHeight);
+        System.out.printf("я могу прыгнуть на  %d \n", maxHeight);
 
     }
+
 
     public void jump(Wall wall) {
         if(canDoIt) {
             if (maxHeight >= wall.height) {
-                System.out.printf(" \n %s перепрыгнул стену высотой %d ", name, wall.height);
+                System.out.printf(" \n %s перепрыгнул стену высотой %d его максимум %d ", name, wall.height, maxHeight);
             } else {
                 System.out.printf(" \n %s не смог перепрыгнуть стену высотой %d, его максимум %d ", name, wall.height, maxHeight);
                 canDoIt = false;
@@ -42,10 +44,10 @@ public class Human implements Athletes {
     @Override
     public void run(Track track) {
         if(canDoIt){
-            if (maxHeight >= track.getLength()) {
-                System.out.printf(" \n %s пробежал %d ", name, track.Length);
+            if (maxLength >= track.getLength()) {
+                System.out.printf(" \n %s пробежал %d , его максимум - %d", name, track.length, maxLength);
             } else {
-                System.out.printf(" \n %s не смог пробежать %d, его максимум - %d", name, track.Length, maxLength);
+                System.out.printf(" \n %s не смог пробежать %d, его максимум - %d", name, track.length, maxLength);
                 canDoIt = false;
 
             }

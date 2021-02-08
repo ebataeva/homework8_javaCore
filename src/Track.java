@@ -1,14 +1,17 @@
 public class Track implements Barriers {
-    int Length;
+    int length;
 
     public Track(int length) {
-        Length = length;
+        this.length = length;
     }
 
     public int getLength() {
-        return Length;
+        return length;
     }
 
 
-
+    @Override
+    public void info() {
+        System.out.println("Длина дороги "+ length);
+    }
 }

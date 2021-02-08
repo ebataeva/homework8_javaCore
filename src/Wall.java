@@ -11,4 +11,7 @@ int height;
     public boolean isItCan(Athletes a) {
         return (a.canDoIt);
     }
+    public void info() {
+        System.out.println("Длина дороги "+ height);
+    }
 }
